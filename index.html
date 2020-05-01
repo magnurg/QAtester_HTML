@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML-практикум</title>
+	<script type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<h1>Пожалуйста, заполните форму. Обязательные поля помечены *</h1>
+	<form  action="" method="post">
+		<fieldset>
+			<legend>Контактная информация</legend>
+
+			<div>
+				<label for="name">Имя *</label>
+				<input type="text" name="name" placeholder="Введите Ваше имя" maxlength="64">
+			</div>
+
+			<div>
+				<label for="phoneNumber">Телефон</label>
+				<input type="tel" name="phoneNumber" placeholder="8 918 931 11 14" maxlength="11">
+				<!--Хотел ещё сделать маску для номера телефона, но там уже надо лезть в дебри js, подключать jQuery, не стал заморачиваться-->
+			</div>
+
+			<div>
+				<label for="email">Email *</label>
+				<input type="text" name="email" placeholder="Введите Ваш Email" maxlength="128">
+			</div>
+		</fieldset><br>
+		<fieldset>
+			<legend>Персональная информация</legend>
+
+				<div>
+					<label for="age">Возраст *</label>
+					<input type="number" min="1" max="140" name="age" placeholder="Введите Ваш Возраст">
+					<!-- Поставил ограничение по длине, но c клавиатуры можно ввести любое число, зато буквы не вводятся, только цифры
+						Также хотел сделать ползунок type="range" но он не показывает цифры, а чтобы показывал, надо опять лезть в js((-->
+				</div>
+
+				<div>
+					<label for="sex">Пол</label>
+					<select>
+						<option value="1">Муж</option>
+						<option value="2">Жен</option>
+					</select>
+				</div>
+
+				<div>
+					<label for="personalDescription">Перечислите личные качества</label>
+					<textarea id="personalDescription"></textarea>
+				</div>
+		</fieldset><br>
+
+		<fieldset>
+			<legend>Выберите Ваших любимых животных</legend>
+				<label><input type="checkbox" name="zebra">Зебра</label>
+				<label><input type="checkbox" name="cat">Кошак</label>
+				<label><input type="checkbox" name="snake">Анаконда</label>
+				<label><input type="checkbox" name="human">Человек</label>
+				<label><input type="checkbox" name="elephant">Слон</label>
+				<label><input type="checkbox" name="antilope">Антилопа</label>
+				<label><input type="checkbox" name="bird">Голубь</label>
+				<label><input type="checkbox" name="crab">Краб</label>
+		</fieldset><br>
+
+		<input type="button" value="Отправить информацию">
+	</form>
+</body>
+</html>
